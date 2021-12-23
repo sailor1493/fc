@@ -35,3 +35,14 @@ mem += step
 print("What we get")
 print("mem == 1")
 print(mem == 1)
+
+epsilon = 10e-6
+
+print("A realistic alternative")
+print("mem ~= 1?")
+diff = mem - 1
+
+if (-epsilon < diff and diff < epsilon):
+    print(True)
+else:
+    print(False)
