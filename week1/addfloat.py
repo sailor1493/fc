@@ -1,18 +1,16 @@
 from decimal import *
 
+N = 10
+
+def repeat_addition(mem, step, reps):
+    for i in range(reps):
+        mem += step
+    return mem
+
 mem = Decimal('0')
 step = Decimal('0.1')
 
-mem += step
-mem += step
-mem += step
-mem += step
-mem += step
-mem += step
-mem += step
-mem += step
-mem += step
-mem += step
+mem = repeat_addition(mem, step, N)
 
 print("What we expect")
 print("mem == 1")
@@ -21,16 +19,7 @@ print(mem == 1)
 step = 0.1
 mem = 0
 
-mem += step
-mem += step
-mem += step
-mem += step
-mem += step
-mem += step
-mem += step
-mem += step
-mem += step
-mem += step
+mem = repeat_addition(mem, step, N)
 
 print("What we get")
 print("mem == 1")
